@@ -29,6 +29,16 @@ body {
     border-bottom: 1px solid #222;
     padding-bottom: 20px;
 }
+header {
+    position: -webkit-sticky; /* For Safari support */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps the heading above the profile cards */
+    background-color: #000000; /* Match your dark mode background */
+    padding: 15px 0;
+    border-bottom: 2px solid #39FF14; /* Optional: Neon green line for a sharp look */
+    text-align: center;
+}
 
 .brand {
     display: flex;
