@@ -265,6 +265,53 @@ header {
     color: black;
     border-color: var(--neon-cyan);
 }
+
+/* Container for the floating button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* WhatsApp Green */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Keeps it above all other elements */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Style for the WhatsApp icon */
+.whatsapp-float img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Hover effect to make it feel interactive */
+.whatsapp-float:hover {
+    background-color: #128c7e; /* Darker green on hover */
+    transform: translateY(-5px); /* Gentle lift effect */
+    color: white;
+}
+
+/* Mobile responsive check: Make it slightly smaller on small screens */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .whatsapp-float span {
+        display: none; /* Optional: Hide the word "WHATSAPP" on mobile to save space */
+    }
+}
 .footer {
     text-align: center;
     margin-top: 50px;
