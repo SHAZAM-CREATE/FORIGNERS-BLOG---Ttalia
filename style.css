@@ -20,22 +20,28 @@ body {
     padding: 20px;
 }
 
-.main-header {
-    max-width: 800px;
-    margin: 0 auto 40px;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0a0a0a;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    
+    /* This centers everything in a vertical stack */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #222;
-    padding-bottom: 20px;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;
 }
+
 .earnings-dashboard {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centers the three boxes */
     gap: 15px;
     width: 100%;
-    padding: 10px 0;
-    flex-wrap: wrap; /* Important for mobile screens */
+    margin-top: 15px; /* Adds space below the heading */
+    flex-wrap: wrap; 
 }
 
 .stat-box {
