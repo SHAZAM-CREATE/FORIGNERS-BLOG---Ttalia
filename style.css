@@ -29,6 +29,61 @@ body {
     border-bottom: 1px solid #222;
     padding-bottom: 20px;
 }
+.earnings-dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 10px 0;
+    flex-wrap: wrap; /* Important for mobile screens */
+}
+
+.stat-box {
+    background: #1a1a1a;
+    padding: 8px 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    border: 1px solid #333;
+}
+
+.stat-box.highlight {
+    border: 1px solid #00ff88; /* Highlight the balance */
+    background: #0d2118;
+}
+
+.label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.value {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.text-green { color: #00ff88; }
+.text-red { color: #ff4d4d; }
+
+/* Mobile optimization: make stats stack nicely */
+@media (max-width: 480px) {
+    .earnings-dashboard {
+        gap: 8px;
+    }
+    .stat-box {
+        padding: 5px 10px;
+        min-width: 80px;
+    }
+    .value {
+        font-size: 14px;
+    }
+}
 header {
     position: -webkit-sticky; /* For Safari support */
     position: sticky;
